@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.PizzaController">
+
+    <TableView fx:id="pizzaTable" prefHeight="425.0" prefWidth="641.0">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="150" text="Nom" />
+            <TableColumn fx:id="priceColumn" prefWidth="100" text="Prix" />
+            <TableColumn fx:id="ingredientsColumn" prefWidth="150" text="Nombre d'ingrédients" />
+        </columns>
+    </TableView>
+
+    <GridPane>
+        <Label text="Nom:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Prix:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="priceTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Nombre d'ingrédients:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="ingredientsTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button onAction="#AjouterButton" text="Ajouter" />
+        <Button onAction="#SupprimerLigneSelectionnee" text="Supprimer Ligne" />
+        <Button onAction="#ViderButton" text="Vider le tableau" />
+    </HBox>
+
+</VBox>
